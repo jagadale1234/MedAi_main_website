@@ -8,35 +8,51 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Healthcare AI Brand Colors */
+    --deep-purple: 304 100% 15%;
+    --vivid-magenta: 302 80% 38%;
+    --purple-blue: 258 100% 50%;
+    --cyan-accent: 195 100% 50%;
+    
+    /* Base Design System */
+    --background: 0 0% 98%;
+    --foreground: 304 100% 15%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 304 100% 15%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 304 100% 15%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 304 100% 15%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 302 80% 95%;
+    --secondary-foreground: 304 100% 15%;
 
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 302 80% 38%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --ring: 302 80% 38%;
 
-    --radius: 0.5rem;
+    /* Brand Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--deep-purple)), hsl(var(--vivid-magenta)));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--deep-purple)) 0%, hsl(var(--vivid-magenta)) 50%, hsl(var(--purple-blue)) 100%);
+    --gradient-accent: linear-gradient(90deg, hsl(var(--cyan-accent)), hsl(var(--purple-blue)));
+    
+    /* Shadows & Effects */
+    --shadow-glow: 0 20px 60px -10px hsl(var(--vivid-magenta) / 0.3);
+    --shadow-soft: 0 10px 30px -5px hsl(var(--deep-purple) / 0.2);
+
+    --radius: 1rem;
 
     --sidebar-background: 0 0% 98%;
 
