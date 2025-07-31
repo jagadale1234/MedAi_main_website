@@ -13,13 +13,12 @@ const Header = () => {
   ];
 
   return (
-    <header className="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-gray-200">
+    <header className="fixed top-0 w-full z-50 bg-deep-purple border-b border-deep-purple">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
           <div className="flex items-center">
-            <img src="/lovable-uploads/62641709-061c-4ba9-8c57-661dac8ee544.png" alt="MEDAI Logo" className="w-8 h-8 mr-3" />
-            <span className="text-xl font-bold text-primary">TriageAI</span>
+            <img src="/lovable-uploads/62641709-061c-4ba9-8c57-661dac8ee544.png" alt="MEDAI Logo" className="w-16 h-16" />
           </div>
 
           {/* Desktop Navigation */}
@@ -28,7 +27,7 @@ const Header = () => {
               <a
                 key={item.name}
                 href={item.href}
-                className="text-foreground hover:text-accent transition-colors font-medium"
+                className="text-white hover:text-cyan-accent transition-colors font-medium"
               >
                 {item.name}
               </a>
@@ -37,7 +36,7 @@ const Header = () => {
 
           {/* CTA Buttons */}
           <div className="hidden md:flex items-center space-x-4">
-            <Button variant="ghost" className="text-foreground hover:text-accent">
+            <Button variant="ghost" className="text-white hover:text-cyan-accent">
               Sign In
             </Button>
             <Button className="bg-gradient-primary text-white hover:shadow-glow transition-all duration-300">
@@ -60,19 +59,19 @@ const Header = () => {
         {/* Mobile Navigation */}
         {isMenuOpen && (
           <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t">
+            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-deep-purple border-t border-deep-purple">
               {navigation.map((item) => (
                 <a
                   key={item.name}
                   href={item.href}
-                  className="block px-3 py-2 text-foreground hover:text-accent transition-colors font-medium"
+                  className="block px-3 py-2 text-white hover:text-cyan-accent transition-colors font-medium"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.name}
                 </a>
               ))}
               <div className="pt-4 space-y-2">
-                <Button variant="ghost" className="w-full text-foreground">
+                <Button variant="ghost" className="w-full text-white">
                   Sign In
                 </Button>
                 <Button className="w-full bg-gradient-primary text-white">
