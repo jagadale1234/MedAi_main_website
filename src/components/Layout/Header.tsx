@@ -18,7 +18,7 @@ const Header = () => {
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
           <div className="flex items-center">
-            <div className="w-8 h-8 bg-gradient-primary rounded-lg mr-3"></div>
+            <img src="/lovable-uploads/62641709-061c-4ba9-8c57-661dac8ee544.png" alt="MEDAI Logo" className="w-8 h-8 mr-3" />
             <span className="text-xl font-bold text-primary">TriageAI</span>
           </div>
 
