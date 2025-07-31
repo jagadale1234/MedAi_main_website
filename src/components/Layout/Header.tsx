@@ -18,7 +18,7 @@ const Header = () => {
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
           <div className="flex items-center">
-            <img src="/lovable-uploads/25fbb0f2-aa0d-46bd-90b8-4de23421e7c7.png" alt="MEDAI Logo" className="w-24 h-24" />
+            <img src="/lovable-uploads/da30a6e6-e4fa-44e0-b6fe-b24edeb22830.png" alt="MEDAI Logo" className="w-24 h-24" />
           </div>
 
           {/* Desktop Navigation */}
