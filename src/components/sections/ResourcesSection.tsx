@@ -79,7 +79,7 @@ const ResourcesSection = () => {
           </Badge>
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
             Resources &
-            <span className="block bg-gradient-primary bg-clip-text text-transparent">
+            <span className="block bg-gradient-primary bg-clip-text text-transparent pb-1">
               Insights
             </span>
           </h2>
