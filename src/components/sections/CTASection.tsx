@@ -8,8 +8,13 @@ import {
   CheckCircle,
   Star
 } from "lucide-react";
+import { useState } from "react";
+import DemoRequestForm from "@/components/forms/DemoRequestForm";
+import CallRequestForm from "@/components/forms/CallRequestForm";
 
 const CTASection = () => {
+  const [isDemoFormOpen, setIsDemoFormOpen] = useState(false);
+  const [isCallFormOpen, setIsCallFormOpen] = useState(false);
   const benefits = [
     "Free 30-day pilot program",
     "Full HIS integration support", 
@@ -34,7 +39,7 @@ const CTASection = () => {
               {[...Array(5)].map((_, i) => (
                 <Star key={i} className="w-6 h-6 text-yellow-400 fill-current" />
               ))}
-              <span className="ml-3 text-white/80">Trusted by 250+ healthcare providers</span>
+              <span className="ml-3 text-white/80">Trusted by Dutch GP practices</span>
             </div>
             
             <h2 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
@@ -45,14 +50,15 @@ const CTASection = () => {
             </h2>
             
             <p className="text-xl md:text-2xl text-white/80 mb-10 max-w-3xl mx-auto">
-              Join leading healthcare providers who are already using TriageAI to deliver 
-              faster, smarter patient care with more time for personal touch.
+              Join innovative GP practices already using MedAI to deliver 
+              smarter, faster care.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
               <Button 
                 size="lg" 
                 className="bg-white text-deep-purple hover:bg-white/90 hover:shadow-glow transition-all duration-300 font-semibold px-8 py-4 text-lg"
+                onClick={() => setIsDemoFormOpen(true)}
               >
                 <Calendar className="mr-2 h-5 w-5" />
                 Schedule Demo
@@ -61,6 +67,7 @@ const CTASection = () => {
                 variant="outline" 
                 size="lg"
                 className="border-white/30 text-white hover:bg-white/10 backdrop-blur-sm font-semibold px-8 py-4 text-lg"
+                onClick={() => setIsDemoFormOpen(true)}
               >
                 Start Free Trial
                 <ArrowRight className="ml-2 h-5 w-5" />
@@ -88,9 +95,12 @@ const CTASection = () => {
               </div>
               <h3 className="text-xl font-semibold text-foreground mb-4">Schedule a Demo</h3>
               <p className="text-muted-foreground mb-6 leading-relaxed">
-                See TriageAI in action with a personalized demo tailored to your healthcare setting and workflow needs.
+                See MedAI in action with a personalized demo tailored to your GP practice and workflow needs.
               </p>
-              <Button className="bg-gradient-primary text-white hover:shadow-glow transition-all duration-300 w-full">
+              <Button 
+                className="bg-gradient-primary text-white hover:shadow-glow transition-all duration-300 w-full"
+                onClick={() => setIsDemoFormOpen(true)}
+              >
                 Book Demo Call
               </Button>
             </CardContent>
@@ -105,7 +115,11 @@ const CTASection = () => {
               <p className="text-muted-foreground mb-6 leading-relaxed">
                 Talk directly with our healthcare technology specialists about your specific triage challenges and requirements.
               </p>
-              <Button variant="outline" className="border-accent text-accent hover:bg-accent/10 w-full">
+              <Button 
+                variant="outline" 
+                className="border-accent text-accent hover:bg-accent/10 w-full"
+                onClick={() => setIsCallFormOpen(true)}
+              >
                 Call Now
               </Button>
             </CardContent>
@@ -146,6 +160,18 @@ const CTASection = () => {
           </div>
         </div>
       </div>
+      
+      {/* Demo Request Form */}
+      <DemoRequestForm 
+        isOpen={isDemoFormOpen} 
+        onClose={() => setIsDemoFormOpen(false)} 
+      />
+      
+      {/* Call Request Form */}
+      <CallRequestForm 
+        isOpen={isCallFormOpen} 
+        onClose={() => setIsCallFormOpen(false)} 
+      />
     </section>
   );
 };

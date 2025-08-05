@@ -1,9 +1,11 @@
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
+import DemoRequestForm from "@/components/forms/DemoRequestForm";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isDemoFormOpen, setIsDemoFormOpen] = useState(false);
 
   const navigation = [
     { name: "Product", href: "#product" },
@@ -15,10 +17,14 @@ const Header = () => {
   return (
     <header className="fixed top-0 w-full z-50 bg-deep-purple border-b border-deep-purple">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center py-4">
+        <div className="flex justify-between items-center py-1">
           {/* Logo */}
           <div className="flex items-center">
-            <img src="/lovable-uploads/df699d22-5411-407d-ad3f-5e36fa3ddd77.png" alt="MEDAI Logo" className="w-24 h-24" />
+            <img 
+              src="/logo2.png" 
+              alt="MEDAI Logo" 
+              className="w-64 h-20 object-contain mix-blend-screen opacity-90 brightness-110" 
+            />
           </div>
 
           {/* Desktop Navigation */}
@@ -36,10 +42,10 @@ const Header = () => {
 
           {/* CTA Buttons */}
           <div className="hidden md:flex items-center space-x-4">
-            <Button variant="ghost" className="text-white hover:text-cyan-accent">
-              Sign In
-            </Button>
-            <Button className="bg-gradient-primary text-white hover:shadow-glow transition-all duration-300">
+            <Button 
+              className="bg-gradient-primary text-white hover:shadow-glow transition-all duration-300"
+              onClick={() => setIsDemoFormOpen(true)}
+            >
               Get Demo
             </Button>
           </div>
@@ -71,10 +77,13 @@ const Header = () => {
                 </a>
               ))}
               <div className="pt-4 space-y-2">
-                <Button variant="ghost" className="w-full text-white">
-                  Sign In
-                </Button>
-                <Button className="w-full bg-gradient-primary text-white">
+                <Button 
+                  className="w-full bg-gradient-primary text-white"
+                  onClick={() => {
+                    setIsDemoFormOpen(true);
+                    setIsMenuOpen(false);
+                  }}
+                >
                   Get Demo
                 </Button>
               </div>
@@ -82,6 +91,12 @@ const Header = () => {
           </div>
         )}
       </div>
+      
+      {/* Demo Request Form */}
+      <DemoRequestForm 
+        isOpen={isDemoFormOpen} 
+        onClose={() => setIsDemoFormOpen(false)} 
+      />
     </header>
   );
 };

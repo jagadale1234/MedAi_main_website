@@ -44,10 +44,10 @@ const Footer = () => {
           <div className="lg:col-span-2">
             <div className="flex items-center mb-6">
               <div className="w-10 h-10 bg-gradient-accent rounded-lg mr-3"></div>
-              <span className="text-2xl font-bold">TriageAI</span>
+              <span className="text-2xl font-bold">MedAI</span>
             </div>
             <p className="text-white/70 mb-6 leading-relaxed">
-              Revolutionizing healthcare triage with AI-powered solutions that maximize care 
+              AI-powered triage for Dutch primary care. Revolutionizing healthcare triage with AI solutions that maximize care 
               efficiency while preserving the human touch that defines exceptional patient care.
             </p>
             
@@ -55,15 +55,15 @@ const Footer = () => {
             <div className="space-y-3">
               <div className="flex items-center">
                 <Mail className="w-5 h-5 mr-3 text-cyan-accent" />
-                <span className="text-white/80">hello@triageai.com</span>
+                <span className="text-white/80">hello@medai.health</span>
               </div>
               <div className="flex items-center">
                 <Phone className="w-5 h-5 mr-3 text-cyan-accent" />
-                <span className="text-white/80">+1 (555) 123-4567</span>
+                <span className="text-white/80">+31 (0)20 123-4567</span>
               </div>
               <div className="flex items-center">
                 <MapPin className="w-5 h-5 mr-3 text-cyan-accent" />
-                <span className="text-white/80">San Francisco, CA</span>
+                <span className="text-white/80">Amsterdam, NL</span>
               </div>
             </div>
 

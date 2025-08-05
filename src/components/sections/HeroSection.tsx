@@ -1,9 +1,13 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Play } from "lucide-react";
+import { useState } from "react";
+import DemoRequestForm from "@/components/forms/DemoRequestForm";
 
 const HeroSection = () => {
+  const [isDemoFormOpen, setIsDemoFormOpen] = useState(false);
+
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-hero">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-hero pt-32 md:pt-24">
       {/* Floating Elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-cyan-accent/20 rounded-full blur-3xl animate-float"></div>
@@ -31,8 +35,7 @@ const HeroSection = () => {
 
           {/* Subtitle */}
           <p className="text-xl md:text-2xl text-white/80 mb-10 max-w-3xl mx-auto leading-relaxed">
-            Revolutionary AI-powered triage system that empowers healthcare providers to deliver faster, 
-            smarter patient care while maintaining the human connection that matters most.
+            AI-powered triage built for Dutch primary care. MedAI automates patient intake using NHG-compliant protocols, reducing triage time by 50% and saving practices over €100,000 annually — without losing the human connection.
           </p>
 
           {/* CTA Buttons */}
@@ -40,6 +43,7 @@ const HeroSection = () => {
             <Button 
               size="lg" 
               className="bg-white text-deep-purple hover:bg-white/90 hover:shadow-glow transition-all duration-300 font-semibold px-8 py-4 text-lg"
+              onClick={() => setIsDemoFormOpen(true)}
             >
               See Demo in Action
               <ArrowRight className="ml-2 h-5 w-5" />
@@ -48,6 +52,7 @@ const HeroSection = () => {
               variant="outline" 
               size="lg"
               className="border-white/30 text-white hover:bg-white/10 backdrop-blur-sm font-semibold px-8 py-4 text-lg"
+              onClick={() => setIsDemoFormOpen(true)}
             >
               <Play className="mr-2 h-5 w-5" />
               Watch Video
@@ -57,7 +62,7 @@ const HeroSection = () => {
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16 pt-8 border-t border-white/20">
             <div className="text-center">
-              <div className="text-3xl font-bold text-white mb-2">89%</div>
+              <div className="text-3xl font-bold text-white mb-2">50%</div>
               <div className="text-white/70 text-sm">Faster Triage</div>
             </div>
             <div className="text-center">
@@ -66,7 +71,7 @@ const HeroSection = () => {
             </div>
             <div className="text-center">
               <div className="text-3xl font-bold text-white mb-2">2.5x</div>
-              <div className="text-white/70 text-sm">More Personal Time</div>
+              <div className="text-white/70 text-sm">More Time with Patients</div>
             </div>
             <div className="text-center">
               <div className="text-3xl font-bold text-white mb-2">24/7</div>
@@ -78,6 +83,12 @@ const HeroSection = () => {
 
       {/* Bottom Gradient Fade */}
       <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent"></div>
+      
+      {/* Demo Request Form */}
+      <DemoRequestForm 
+        isOpen={isDemoFormOpen} 
+        onClose={() => setIsDemoFormOpen(false)} 
+      />
     </section>
   );
 };

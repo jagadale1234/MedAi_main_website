@@ -13,52 +13,52 @@ import {
 const AboutSection = () => {
   const teamMembers = [
     {
+      name: "Mohamed Ali",
+      role: "Founder & CEO",
+      initials: "MA",
+      description: "Healthcare professional and AI innovator"
+    },
+    {
+      name: "Inay",
+      role: "Co-founder", 
+      initials: "I",
+      description: "Healthcare technology specialist"
+    },
+    {
       name: "Vince",
-      role: "Chief Executive Officer",
-      initials: "V",
-      description: "Visionary leader with 15+ years in healthcare innovation"
+      role: "Technical Lead & Developer",
+      initials: "V", 
+      description: "Full-stack developer and system architect"
     },
     {
       name: "Anish",
-      role: "Chief Technology Officer", 
+      role: "AI Engineer & Developer",
       initials: "A",
       description: "AI/ML expert specializing in healthcare applications"
     },
     {
       name: "Mark",
-      role: "Chief Medical Officer",
-      initials: "M", 
-      description: "Practicing physician with deep clinical expertise"
-    },
-    {
-      name: "Inay",
-      role: "Head of Product",
-      initials: "I",
-      description: "Healthcare UX specialist focused on provider workflows"
-    },
-    {
-      name: "Mohamed",
-      role: "Lead Data Scientist",
+      role: "Architect Developer",
       initials: "M",
-      description: "ML researcher with expertise in medical data analysis"
+      description: "Software architect and development lead"
     }
   ];
 
   const values = [
     {
       icon: Heart,
-      title: "Patient-Centered Care",
-      description: "Everything we build puts patient well-being and safety first, ensuring technology enhances rather than replaces human compassion."
+      title: "Patient-Centered",
+      description: "Safety and compassion first."
     },
     {
       icon: Target,
-      title: "Clinical Excellence",
-      description: "We partner with healthcare professionals to create solutions that genuinely improve clinical outcomes and provider satisfaction."
+      title: "Clinically Driven",
+      description: "Built with and for healthcare professionals."
     },
     {
       icon: Lightbulb,
       title: "Innovation with Purpose",
-      description: "Our AI innovations are designed to solve real healthcare challenges, backed by rigorous clinical validation and evidence."
+      description: "Technology designed to solve real frontline challenges."
     }
   ];
 
@@ -78,9 +78,7 @@ const AboutSection = () => {
             </span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Founded by healthcare professionals and AI experts, TriageAI bridges the gap between 
-            cutting-edge technology and compassionate patient care. Our mission is to give healthcare 
-            providers the tools they need to deliver exceptional care efficiently.
+            Founded in Amsterdam by healthcare professionals and AI innovators, MedAI was created to solve one of primary care's biggest challenges: rising patient demand and limited GP capacity. Our mission is to empower care teams with tools that save time, reduce burnout, and maintain quality care.
           </p>
         </div>
 
@@ -93,9 +91,7 @@ const AboutSection = () => {
               </div>
               <h3 className="text-2xl font-bold text-foreground mb-4">Our Mission</h3>
               <p className="text-muted-foreground leading-relaxed">
-                To empower healthcare providers with intelligent triage solutions that maximize efficiency 
-                while preserving the human touch that defines exceptional patient care. We believe technology 
-                should enhance, not replace, the doctor-patient relationship.
+                To enable GPs and triagists to provide faster, safer care using AI-powered triage — without compromising the personal connection at the heart of healthcare.
               </p>
             </CardContent>
           </Card>
@@ -107,9 +103,7 @@ const AboutSection = () => {
               </div>
               <h3 className="text-2xl font-bold text-foreground mb-4">Our Vision</h3>
               <p className="text-muted-foreground leading-relaxed">
-                A world where every healthcare provider has access to intelligent clinical decision support, 
-                where patients receive faster, more accurate care, and where technology seamlessly integrates 
-                into healthcare workflows to improve outcomes for everyone.
+                A future where every GP practice in the Netherlands benefits from AI-driven triage that reduces workload, improves patient outcomes, and integrates seamlessly into existing workflows.
               </p>
             </CardContent>
           </Card>

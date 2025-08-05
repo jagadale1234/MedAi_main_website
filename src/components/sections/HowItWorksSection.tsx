@@ -16,42 +16,42 @@ const HowItWorksSection = () => {
     {
       icon: UserPlus,
       title: "Patient Registration",
-      description: "Patients register online or through your existing HIS system with basic information and chief complaint.",
+      description: "Patients initiate triage via your website or HIS with basic info.",
       step: "01",
       color: "from-cyan-accent to-purple-blue"
     },
     {
       icon: MessageSquare,
       title: "Symptom Assessment",
-      description: "AI-guided questionnaire adapts based on responses, gathering comprehensive symptom data efficiently.",
+      description: "AI-adaptive questioning gathers comprehensive clinical data.",
       step: "02",
       color: "from-purple-blue to-vivid-magenta"
     },
     {
       icon: Brain,
       title: "AI Analysis",
-      description: "Advanced algorithms process symptoms, medical history, and clinical guidelines to generate triage recommendations.",
+      description: "Algorithms apply NHG triage rules (ABCDE + ingangsklachten) to determine urgency.",
       step: "03",
       color: "from-vivid-magenta to-deep-purple"
     },
     {
       icon: Stethoscope,
       title: "Clinical Review",
-      description: "Healthcare providers review AI recommendations with full context and make final clinical decisions.",
+      description: "Provider reviews AI recommendation with complete context.",
       step: "04",
       color: "from-deep-purple to-cyan-accent"
     },
     {
       icon: FileText,
       title: "Care Coordination",
-      description: "Automated documentation and care pathway initiation based on triage priority and clinical protocols.",
+      description: "Automated documentation and routing to appropriate care path.",
       step: "05",
       color: "from-cyan-accent to-purple-blue"
     },
     {
       icon: TrendingUp,
       title: "Outcome Tracking",
-      description: "Continuous monitoring and analytics to optimize triage accuracy and improve patient outcomes.",
+      description: "Continuous monitoring and analytics for performance optimization.",
       step: "06",
       color: "from-purple-blue to-vivid-magenta"
     }
@@ -66,7 +66,7 @@ const HowItWorksSection = () => {
             Simple Integration
           </Badge>
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-            How TriageAI
+            How MedAI
             <span className="block bg-gradient-primary bg-clip-text text-transparent">
               Transforms Your Workflow
             </span>
@@ -130,7 +130,7 @@ const HowItWorksSection = () => {
               Seamless Integration with Your Existing Systems
             </h3>
             <p className="text-muted-foreground text-lg">
-              No disruption to your current workflow. TriageAI works with your HIS, EMR, and clinical protocols.
+              No disruption to your current workflow. MedAI works with your HIS, EMR, and clinical protocols.
             </p>
           </div>
           
@@ -140,7 +140,7 @@ const HowItWorksSection = () => {
                 <FileText className="w-8 h-8 text-white" />
               </div>
               <h4 className="font-semibold text-foreground mb-2">HIS Integration</h4>
-              <p className="text-muted-foreground text-sm">Direct integration with major Health Information Systems</p>
+              <p className="text-muted-foreground text-sm">Compatible with leading Dutch HIS (e.g., Medicom, Promedico)</p>
             </div>
             
             <div className="text-center">
@@ -156,7 +156,7 @@ const HowItWorksSection = () => {
                 <TrendingUp className="w-8 h-8 text-white" />
               </div>
               <h4 className="font-semibold text-foreground mb-2">Real-time Analytics</h4>
-              <p className="text-muted-foreground text-sm">Live dashboard with actionable insights and reporting</p>
+              <p className="text-muted-foreground text-sm">Live dashboards for triage data and quality metrics</p>
             </div>
           </div>
         </div>

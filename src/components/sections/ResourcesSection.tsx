@@ -16,21 +16,21 @@ const ResourcesSection = () => {
   const blogPosts = [
     {
       title: "The Future of AI in Primary Care: NHG Standards Integration",
-      description: "Exploring how AI-powered triage systems are revolutionizing primary care workflows while maintaining compliance with NHG guidelines.",
+      description: "How MedAI integrates NHG standards to revolutionize Dutch primary care workflows while maintaining compliance with clinical guidelines.",
       category: "Clinical Insights",
       readTime: "8 min read",
       date: "March 2024"
     },
     {
-      title: "Reducing Patient Wait Times: A Data-Driven Approach",
-      description: "How intelligent triage systems are helping healthcare providers reduce patient wait times by up to 89% without compromising care quality.",
+      title: "Case Study: Reducing Wait Times in Dutch GP Practices",
+      description: "How intelligent triage systems are helping Dutch healthcare providers reduce patient wait times by up to 50% without compromising care quality.",
       category: "Case Study",
       readTime: "6 min read", 
       date: "February 2024"
     },
     {
-      title: "ABCDE Integration in Modern Triage Systems",
-      description: "Understanding the implementation of ABCDE (Airway, Breathing, Circulation, Disability, Exposure) protocols in AI-assisted triage.",
+      title: "Technical Deep Dive: ABCDE Triage and AI",
+      description: "Understanding the implementation of ABCDE (Airway, Breathing, Circulation, Disability, Exposure) protocols in AI-assisted triage systems.",
       category: "Technical",
       readTime: "10 min read",
       date: "January 2024"
@@ -41,21 +41,21 @@ const ResourcesSection = () => {
     {
       icon: FileText,
       title: "Implementation Guide",
-      description: "Step-by-step guide for integrating TriageAI with your existing HIS and clinical workflows.",
+      description: "Step-by-step guide for integrating MedAI with your existing HIS and clinical workflows.",
       type: "PDF Download",
       action: "Download Guide"
     },
     {
       icon: Video,
       title: "Product Demo Recording",
-      description: "30-minute comprehensive demo showing TriageAI in action with real clinical scenarios.",
+      description: "30-minute comprehensive demo showing MedAI in action with real clinical scenarios.",
       type: "Video",
       action: "Watch Demo"
     },
     {
       icon: BookOpen,
       title: "Clinical Validation Report",
-      description: "Detailed analysis of TriageAI's accuracy and performance in clinical validation studies.",
+      description: "Detailed analysis of MedAI's accuracy and performance in clinical validation studies.",
       type: "Research Paper",
       action: "Read Report"
     },
@@ -132,7 +132,7 @@ const ResourcesSection = () => {
           <div className="text-center mb-12">
             <h3 className="text-3xl font-bold text-foreground mb-4">Download Resources</h3>
             <p className="text-muted-foreground text-lg">
-              Everything you need to evaluate, implement, and optimize TriageAI
+              Everything you need to evaluate, implement, and optimize MedAI
             </p>
           </div>
           

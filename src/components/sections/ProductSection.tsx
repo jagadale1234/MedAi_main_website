@@ -16,48 +16,47 @@ const ProductSection = () => {
     {
       icon: Brain,
       title: "AI-Powered Triage",
-      description: "Advanced machine learning algorithms analyze patient symptoms and medical history to provide accurate triage recommendations in seconds.",
+      description: "Uses advanced algorithms to analyze symptoms and medical history, following NHG's ABCDE and ingangsklachten frameworks for accurate urgency classification (U0–U5).",
       badge: "Core Feature"
     },
     {
       icon: Clock,
       title: "Real-Time Processing",
-      description: "Instant patient assessment and prioritization, reducing wait times and improving care delivery efficiency.",
+      description: "Delivers instant triage recommendations, cutting wait times and boosting efficiency during peak hours.",
       badge: "Speed"
     },
     {
       icon: Shield,
       title: "NHG Compliant",
-      description: "Fully compliant with NHG standards and ABCDE integration protocols for seamless healthcare workflow integration.",
+      description: "Fully aligned with Dutch triage standards and ABCDE safety checks to ensure reliable, standardized care.",
       badge: "Compliance"
     },
     {
       icon: Users,
       title: "Multi-Provider Support",
-      description: "Designed for GPs, nurses, and healthcare teams with role-based access and customizable workflows.",
+      description: "Designed for GP practices, out-of-hours services, and nurses with customizable workflows and role-based access.",
       badge: "Flexibility"
     },
     {
       icon: Stethoscope,
       title: "Clinical Decision Support",
-      description: "Evidence-based recommendations that enhance clinical decision-making while preserving physician autonomy.",
+      description: "Provides evidence-based recommendations to assist providers while keeping the clinician in control of final decisions.",
       badge: "Clinical"
     },
     {
       icon: BarChart3,
       title: "Analytics Dashboard",
-      description: "Comprehensive insights into patient flow, triage patterns, and clinical outcomes for continuous improvement.",
+      description: "Tracks triage outcomes, patient flow, and system performance to support continuous improvement and reporting.",
       badge: "Insights"
     }
   ];
 
   const benefits = [
-    "Reduce patient wait times by up to 89%",
-    "Increase diagnostic accuracy with AI assistance",
-    "Streamline workflow for healthcare providers",
-    "Improve patient satisfaction scores",
-    "Ensure regulatory compliance",
-    "Scale efficiently with growing patient volume"
+    "Reduce triage workload by up to 50%",
+    "Increase diagnostic consistency with AI guidance",
+    "Free up GP time for high-value patient interactions",
+    "Fully NHG and GDPR compliant",
+    "Scales easily as patient volumes grow"
   ];
 
   return (
@@ -70,15 +69,13 @@ const ProductSection = () => {
             Revolutionary Technology
           </Badge>
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-            Intelligent Triage That
+            AI-Powered Triage That
             <span className="block bg-gradient-primary bg-clip-text text-transparent">
-              Transforms Healthcare
+              Transforms Primary Care
             </span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Our AI-powered platform seamlessly integrates with your existing HIS, 
-            providing intelligent patient triage that enhances care quality while 
-            giving healthcare providers more time for meaningful patient interactions.
+            MedAI integrates seamlessly with existing HIS systems to provide intelligent, NHG-compliant triage. Our platform improves access to care, reduces workload, and enables healthcare professionals to focus on what matters most: the patient.
           </p>
         </div>
 
@@ -116,7 +113,7 @@ const ProductSection = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <h3 className="text-3xl font-bold text-foreground mb-6">
-                Why Healthcare Providers Choose TriageAI
+                Why Choose MedAI
               </h3>
               <div className="space-y-4">
                 {benefits.map((benefit, index) => (
