@@ -44,7 +44,7 @@ const CTASection = () => {
             
             <h2 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
               Ready to Transform
-              <span className="block bg-gradient-to-r from-cyan-accent to-white bg-clip-text text-transparent">
+              <span className="block bg-gradient-to-r from-cyan-accent to-white bg-clip-text text-transparent pb-1">
                 Your Triage Process?
               </span>
             </h2>

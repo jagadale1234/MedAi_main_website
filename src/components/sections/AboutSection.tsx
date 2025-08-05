@@ -71,9 +71,9 @@ const AboutSection = () => {
             <Users className="w-4 h-4 mr-2" />
             Our Story
           </Badge>
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6 leading-tight">
             Revolutionizing Healthcare
-            <span className="block bg-gradient-primary bg-clip-text text-transparent">
+            <span className="block bg-gradient-primary bg-clip-text text-transparent pb-1">
               One Triage at a Time
             </span>
           </h2>

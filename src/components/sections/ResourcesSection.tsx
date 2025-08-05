@@ -83,9 +83,9 @@ const ResourcesSection = () => {
               Insights
             </span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             Stay informed with the latest insights on AI in healthcare, implementation guides, 
-            and clinical research to help you make informed decisions about triage technology.
+            and clinical research to help you make informed decisions about intelligent triage technology.
           </p>
         </div>
 
