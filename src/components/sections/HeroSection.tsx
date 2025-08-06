@@ -7,7 +7,7 @@ const HeroSection = () => {
   const [isDemoFormOpen, setIsDemoFormOpen] = useState(false);
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-hero pt-32 md:pt-24 pb-20">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-hero pt-20 md:pt-24 pb-20">
       {/* Floating Elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-cyan-accent/20 rounded-full blur-3xl animate-float"></div>
@@ -39,23 +39,14 @@ const HeroSection = () => {
           </p>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <div className="flex justify-center items-center">
             <Button 
               size="lg" 
               className="bg-white text-deep-purple hover:bg-white/90 hover:shadow-glow transition-all duration-300 font-semibold px-8 py-4 text-lg"
               onClick={() => setIsDemoFormOpen(true)}
             >
               See Demo in Action
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
-            <Button 
-              variant="outline" 
-              size="lg"
-              className="border-white/30 text-white hover:bg-white/10 backdrop-blur-sm font-semibold px-8 py-4 text-lg"
-              onClick={() => setIsDemoFormOpen(true)}
-            >
-              <Play className="mr-2 h-5 w-5" />
-              Watch Video
+              
             </Button>
           </div>
 

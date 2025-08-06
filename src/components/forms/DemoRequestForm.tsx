@@ -35,25 +35,53 @@ const DemoRequestForm = ({ isOpen, onClose }: DemoRequestFormProps) => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    
-    setIsSubmitting(false);
-    setIsSubmitted(true);
-    
-    // Auto close after success message
-    setTimeout(() => {
-      setIsSubmitted(false);
-      onClose();
-      setFormData({
-        name: "",
-        email: "",
-        date: "",
-        time: "",
-        practice: "",
-        phone: ""
-      });
-    }, 2000);
+    // Create submission object with timestamp
+    const submission = {
+      ...formData,
+      submittedAt: new Date().toISOString(),
+      id: Date.now().toString()
+    };
+
+    try {
+      // Log to console for now
+      console.log('Demo Request Submission:', submission);
+      
+      // Save to localStorage as a simple storage solution
+      const existingSubmissions = JSON.parse(localStorage.getItem('demoRequests') || '[]');
+      existingSubmissions.push(submission);
+      localStorage.setItem('demoRequests', JSON.stringify(existingSubmissions));
+      
+      // In a real app, you would send this to your backend API:
+      // await fetch('/api/demo-requests', {
+      //   method: 'POST',
+      //   headers: { 'Content-Type': 'application/json' },
+      //   body: JSON.stringify(submission)
+      // });
+
+      // Simulate network delay
+      await new Promise(resolve => setTimeout(resolve, 1000));
+      
+      setIsSubmitting(false);
+      setIsSubmitted(true);
+      
+      // Auto close after success message
+      setTimeout(() => {
+        setIsSubmitted(false);
+        onClose();
+        setFormData({
+          name: "",
+          email: "",
+          date: "",
+          time: "",
+          practice: "",
+          phone: ""
+        });
+      }, 2000);
+    } catch (error) {
+      console.error('Error submitting demo request:', error);
+      setIsSubmitting(false);
+      // Handle error state here
+    }
   };
 
   if (!isOpen) return null;

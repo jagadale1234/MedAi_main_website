@@ -17,18 +17,18 @@ const Header = () => {
   return (
     <header className="fixed top-0 w-full z-50 bg-deep-purple border-b border-deep-purple">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center py-1">
+        <div className="flex items-center py-0.5 md:py-1">
           {/* Logo */}
-          <div className="flex items-center">
+          <div className="flex items-center flex-shrink-0 w-48 md:w-64">
             <img 
               src="/logo2.png" 
               alt="MEDAI Logo" 
-              className="w-64 h-20 object-contain mix-blend-screen opacity-90 brightness-110" 
+              className="w-48 h-12 md:w-64 md:h-20 object-contain mix-blend-screen opacity-90 brightness-110" 
             />
           </div>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden md:flex space-x-8">
+          {/* Desktop Navigation - Centered */}
+          <nav className="hidden md:flex flex-1 justify-center space-x-8">
             {navigation.map((item) => (
               <a
                 key={item.name}
@@ -41,7 +41,7 @@ const Header = () => {
           </nav>
 
           {/* CTA Buttons */}
-          <div className="hidden md:flex items-center space-x-4">
+          <div className="hidden md:flex items-center justify-end w-48 md:w-64">
             <Button 
               className="bg-gradient-primary text-white hover:shadow-glow transition-all duration-300"
               onClick={() => setIsDemoFormOpen(true)}
@@ -51,7 +51,7 @@ const Header = () => {
           </div>
 
           {/* Mobile menu button */}
-          <div className="md:hidden">
+          <div className="md:hidden flex justify-end flex-1 pl-4 pr-2">
             <Button
               variant="ghost"
               size="sm"

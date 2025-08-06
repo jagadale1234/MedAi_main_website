@@ -10,11 +10,9 @@ import {
 } from "lucide-react";
 import { useState } from "react";
 import DemoRequestForm from "@/components/forms/DemoRequestForm";
-import CallRequestForm from "@/components/forms/CallRequestForm";
 
 const CTASection = () => {
   const [isDemoFormOpen, setIsDemoFormOpen] = useState(false);
-  const [isCallFormOpen, setIsCallFormOpen] = useState(false);
   const benefits = [
     "Free 30-day pilot program",
     "Full HIS integration support", 
@@ -54,7 +52,7 @@ const CTASection = () => {
               smarter, faster care.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
+            <div className="flex justify-center items-center mb-12">
               <Button 
                 size="lg" 
                 className="bg-white text-deep-purple hover:bg-white/90 hover:shadow-glow transition-all duration-300 font-semibold px-8 py-4 text-lg"
@@ -62,15 +60,6 @@ const CTASection = () => {
               >
                 <Calendar className="mr-2 h-5 w-5" />
                 Schedule Demo
-              </Button>
-              <Button 
-                variant="outline" 
-                size="lg"
-                className="border-white/30 text-white hover:bg-white/10 backdrop-blur-sm font-semibold px-8 py-4 text-lg"
-                onClick={() => setIsDemoFormOpen(true)}
-              >
-                Start Free Trial
-                <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
             </div>
             
@@ -87,7 +76,7 @@ const CTASection = () => {
         </div>
 
         {/* Contact Options */}
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
           <Card className="border-0 shadow-soft hover:shadow-glow transition-all duration-300 group text-center">
             <CardContent className="p-8">
               <div className="w-16 h-16 bg-gradient-primary rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
@@ -109,32 +98,17 @@ const CTASection = () => {
           <Card className="border-0 shadow-soft hover:shadow-glow transition-all duration-300 group text-center">
             <CardContent className="p-8">
               <div className="w-16 h-16 bg-gradient-primary rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                <Phone className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-xl font-semibold text-foreground mb-4">Speak with Expert</h3>
-              <p className="text-muted-foreground mb-6 leading-relaxed">
-                Talk directly with our healthcare technology specialists about your specific triage challenges and requirements.
-              </p>
-              <Button 
-                variant="outline" 
-                className="border-accent text-accent hover:bg-accent/10 w-full"
-                onClick={() => setIsCallFormOpen(true)}
-              >
-                Call Now
-              </Button>
-            </CardContent>
-          </Card>
-
-          <Card className="border-0 shadow-soft hover:shadow-glow transition-all duration-300 group text-center">
-            <CardContent className="p-8">
-              <div className="w-16 h-16 bg-gradient-primary rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
                 <Mail className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-xl font-semibold text-foreground mb-4">Get Information</h3>
               <p className="text-muted-foreground mb-6 leading-relaxed">
                 Request detailed information, pricing, and implementation timelines customized for your organization.
               </p>
-              <Button variant="outline" className="border-accent text-accent hover:bg-accent/10 w-full">
+              <Button 
+                variant="outline" 
+                className="border-accent text-accent hover:bg-accent/10 w-full"
+                onClick={() => setIsDemoFormOpen(true)}
+              >
                 Contact Sales
               </Button>
             </CardContent>
@@ -165,12 +139,6 @@ const CTASection = () => {
       <DemoRequestForm 
         isOpen={isDemoFormOpen} 
         onClose={() => setIsDemoFormOpen(false)} 
-      />
-      
-      {/* Call Request Form */}
-      <CallRequestForm 
-        isOpen={isCallFormOpen} 
-        onClose={() => setIsCallFormOpen(false)} 
       />
     </section>
   );
