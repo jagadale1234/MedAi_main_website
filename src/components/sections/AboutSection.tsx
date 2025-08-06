@@ -19,27 +19,27 @@ const AboutSection = () => {
       description: "Healthcare professional and AI innovator"
     },
     {
-      name: "Inay",
+      name: "Inay Sayedi",
       role: "Co-founder", 
-      initials: "I",
+      initials: "IS",
       description: "Healthcare technology specialist"
     },
     {
-      name: "Vince",
+      name: "Vince Szabó",
       role: "Technical Lead & Developer",
-      initials: "V", 
+      initials: "VS", 
       description: "Full-stack developer and system architect"
     },
     {
-      name: "Anish",
+      name: "Anish Jagadale",
       role: "AI Engineer & Developer",
-      initials: "A",
+      initials: "AJ",
       description: "AI/ML expert specializing in healthcare applications"
     },
     {
-      name: "Mark",
+      name: "Márk Bodrácska",
       role: "Architect Developer",
-      initials: "M",
+      initials: "MB",
       description: "Software architect and development lead"
     }
   ];
