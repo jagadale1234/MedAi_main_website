@@ -4,6 +4,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Calendar, Clock, User, Mail, X } from "lucide-react";
+import { sendDemoRequestEmail } from "@/lib/emailService";
 
 interface DemoRequestFormProps {
   isOpen: boolean;
@@ -50,6 +51,15 @@ const DemoRequestForm = ({ isOpen, onClose }: DemoRequestFormProps) => {
       const existingSubmissions = JSON.parse(localStorage.getItem('demoRequests') || '[]');
       existingSubmissions.push(submission);
       localStorage.setItem('demoRequests', JSON.stringify(existingSubmissions));
+      
+      // Send email notification
+      const emailSent = await sendDemoRequestEmail(submission);
+      
+      if (emailSent) {
+        console.log('Email notification sent successfully');
+      } else {
+        console.warn('Failed to send email notification');
+      }
       
       // In a real app, you would send this to your backend API:
       // await fetch('/api/demo-requests', {

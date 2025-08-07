@@ -11,6 +11,7 @@ const Header = () => {
     { name: "Product", href: "#product" },
     { name: "How It Works", href: "#how-it-works" },
     { name: "About", href: "#about" },
+    { name: "Blog", href: "#blog" },
   ];
 
   return (
@@ -20,9 +21,9 @@ const Header = () => {
           {/* Logo */}
           <div className="flex items-center flex-shrink-0 w-48 md:w-64">
             <img 
-              src="/logo2.png" 
+              src="/edited.png" 
               alt="MEDAI Logo" 
-              className="w-48 h-12 md:w-64 md:h-20 object-contain mix-blend-screen opacity-90 brightness-110" 
+              className="w-48 h-12 md:w-64 md:h-20 object-contain" 
             />
           </div>
 
